@@ -39,6 +39,12 @@ namespace Echecs.Domaine
             piece = newPiece;
 
             piece.joueur.partie.vue.ActualiserCase(Colonne, Rangee, piece.info);
+
+            List<Piece> liste_pieces = piece.joueur.piecesCapturees;
+
+            List<InfoPiece> infoPieces = liste_pieces.Select(x => x.info).ToList();
+
+            piece.joueur.partie.vue.ActualiserCaptures(infoPieces);
         }
     }
 }

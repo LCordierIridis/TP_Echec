@@ -30,6 +30,10 @@ namespace Echecs.Domaine
 
             if ((movingInDiagonal || movingInOnlyOneDirection) && destination != position && !destinationOccupiedBySameColor && !pieceSurLeChemin(destination))
             {
+                // capture
+                if (destination.piece != null)
+                    joueur.piecesCapturees.Add(destination.piece);
+
                 destination.Link(this);
                 this.position = destination;
                 return true;

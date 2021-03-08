@@ -55,6 +55,7 @@ namespace Echecs.Domaine
             if(destinationOccupied && destination.piece.joueur.couleur != joueur.couleur &&
                 horizontal_distance == 1 * colorMultiplier && Math.Abs(vertical_distance) == 1)
             {
+                joueur.piecesCapturees.Add(destination.piece);
                 destination.Link(this);
                 this.position = destination;
                 enPassant = false;

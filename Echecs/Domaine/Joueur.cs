@@ -14,7 +14,8 @@ namespace Echecs.Domaine
 
         // associations
         public Partie partie { get; }
-        public List<Piece> pieces = new List<Piece>();
+        public List<Piece> pieces { get; set; }
+        public List<Piece> piecesCapturees { get; set; }
         public static int LAST_PIECE = 64;
         public static int NB_MAX_PIECE = 16;
         public static int NB_PIECE_ROW = 8;
@@ -26,6 +27,8 @@ namespace Echecs.Domaine
             this.couleur = couleur;
             this.partie = partie;
 
+            pieces = new List<Piece>();
+            piecesCapturees = new List<Piece>();
 
             pieces.Add(new Tour(this));
             pieces.Add(new Cavalier(this));
