@@ -1,0 +1,29 @@
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.exe.config
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.exe
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.pdb
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.exe
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.pdb
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\obj\Debug\Echecs.csprojResolveAssemblyReference.cache
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\obj\Debug\Echecs.IHM.FenetreDeJeu.resources
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.Properties.Resources.resources
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\Echecs\obj\Debug\Echecs.csproj.GenerateResource.Cache
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.exe.config
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.exe
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.pdb
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\obj\Debug\Echecs.csprojAssemblyReference.cache
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\obj\Debug\Echecs.IHM.FenetreDeJeu.resources
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.Properties.Resources.resources
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\obj\Debug\Echecs.csproj.GenerateResource.cache
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\obj\Debug\Echecs.csproj.CoreCompileInputs.cache
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.exe
+C:\Users\ramar\Documents\Cours E5\Génie Logiciel\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.pdb
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\obj\Debug\Echecs.IHM.FenetreDeJeu.resources
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.Properties.Resources.resources
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\obj\Debug\Echecs.csproj.GenerateResource.cache
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\obj\Debug\Echecs.csproj.CoreCompileInputs.cache
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.exe
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\obj\Debug\TP2_Echecs.pdb
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.exe.config
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.exe
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\bin\Debug\TP2_Echecs.pdb
+C:\Users\Luc\Desktop\TP3_Echecs\Echecs\obj\Debug\Echecs.csprojAssemblyReference.cache

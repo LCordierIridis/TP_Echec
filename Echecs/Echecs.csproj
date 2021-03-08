@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97955BF5-F52A-4EB1-A9DA-80A282EC2674}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TP2_Echecs</RootNamespace>
+    <AssemblyName>TP2_Echecs</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domaine\Case.cs" />
+    <Compile Include="Domaine\Coup.cs" />
+    <Compile Include="Domaine\Pieces\Cavalier.cs" />
+    <Compile Include="Domaine\Pieces\Fou.cs" />
+    <Compile Include="Domaine\Pieces\Tour.cs" />
+    <Compile Include="Domaine\Pieces\Roi.cs" />
+    <Compile Include="Domaine\Pieces\Pion.cs" />
+    <Compile Include="Domaine\Echiquier.cs" />
+    <Compile Include="Domaine\Joueur.cs" />
+    <Compile Include="Domaine\Partie.cs" />
+    <Compile Include="Domaine\Piece.cs" />
+    <Compile Include="Domaine\Pieces\Dame.cs" />
+    <Compile Include="IHM\FenetreDeJeu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\FenetreDeJeu.Designer.cs">
+      <DependentUpon>FenetreDeJeu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\IEvenements.cs" />
+    <Compile Include="IHM\IJeu.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="IHM\FenetreDeJeu.resx">
+      <DependentUpon>FenetreDeJeu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChessIcon.ico" />
+    <None Include="IHM\Images\Pieces\Rook_White.gif" />
+    <None Include="IHM\Images\Pieces\Rook_Black.gif" />
+    <None Include="IHM\Images\Pieces\Queen_White.gif" />
+    <None Include="IHM\Images\Pieces\Queen_Black.gif" />
+    <None Include="IHM\Images\Pieces\Pawn_White.gif" />
+    <None Include="IHM\Images\Pieces\Pawn_Black.gif" />
+    <None Include="IHM\Images\Pieces\Knight_White.gif" />
+    <None Include="IHM\Images\Pieces\Knight_Black.gif" />
+    <None Include="IHM\Images\Pieces\King_White.gif" />
+    <None Include="IHM\Images\Pieces\King_Black.gif" />
+    <None Include="IHM\Images\Pieces\Bishop_White.gif" />
+    <None Include="IHM\Images\Pieces\Bishop_Black.gif" />
+    <None Include="IHM\Cursors\WhiteRook.cur" />
+    <None Include="IHM\Cursors\WhiteQueen.cur" />
+    <None Include="IHM\Cursors\WhitePawn.cur" />
+    <None Include="IHM\Cursors\WhiteKnight.cur" />
+    <None Include="IHM\Cursors\WhiteKing.cur" />
+    <None Include="IHM\Cursors\WhiteBishop.cur" />
+    <None Include="IHM\Cursors\BlackRook.cur" />
+    <None Include="IHM\Cursors\BlackQueen.cur" />
+    <None Include="IHM\Cursors\BlackPawn.cur" />
+    <None Include="IHM\Cursors\BlackKnight.cur" />
+    <None Include="IHM\Cursors\BlackKing.cur" />
+    <None Include="IHM\Cursors\BlackBishop.cur" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

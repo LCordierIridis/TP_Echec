@@ -1,0 +1,9 @@
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe.config
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.pdb
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\obj\Debug\TP3_Echecs.csprojResolveAssemblyReference.cache
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.IHM.FenetreDeJeu.resources
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.Properties.Resources.resources
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\obj\Debug\TP3_Echecs.csproj.GenerateResource.Cache
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.exe
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.pdb

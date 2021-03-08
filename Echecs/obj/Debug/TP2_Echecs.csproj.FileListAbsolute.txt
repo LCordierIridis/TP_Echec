@@ -1,0 +1,30 @@
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe.config
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.csprojResolveAssemblyReference.cache
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.Properties.Resources.resources
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.csproj.GenerateResource.Cache
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.pdb
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.IHM.FenetreDeJeu.resources
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.exe
+c:\users\giovanni\documents\visual studio 2015\Projects\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.pdb
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe.config
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.exe
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.pdb
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.csprojResolveAssemblyReference.cache
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.IHM.FenetreDeJeu.resources
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.Properties.Resources.resources
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.csproj.GenerateResource.Cache
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe
+C:\Users\Giovanni\Desktop\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.pdb
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe.config
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.exe
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.pdb
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.pdb
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.csprojResolveAssemblyReference.cache
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.IHM.FenetreDeJeu.resources
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.Properties.Resources.resources
+C:\Users\chierchg\Corsi\Cours GL\Esercizi\TP2_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.csproj.GenerateResource.Cache
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\bin\Debug\TP2_Echecs.exe.config
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.exe
+C:\Users\chierchg\Corsi\GL\Esercizi\TP3_Echecs\TP2_Echecs\obj\Debug\TP2_Echecs.pdb
