@@ -19,13 +19,9 @@ namespace Echecs.Domaine
         // associations
         public Piece piece;
 
-        //public IEvenements vue { get; set; }
-
         // methodes
         public void Unlink()
         {
-            // piece.joueur.partie.vue.ActualiserCase(Colonne, Rangee, null);
-
             piece = null;
         }
         public void Link(Piece newPiece)
@@ -40,10 +36,9 @@ namespace Echecs.Domaine
 
             piece.joueur.partie.vue.ActualiserCase(Colonne, Rangee, piece.info);
 
+            // Rempli la liste de pièces capturées
             List<Piece> liste_pieces = piece.joueur.piecesCapturees;
-
             List<InfoPiece> infoPieces = liste_pieces.Select(x => x.info).ToList();
-
             piece.joueur.partie.vue.ActualiserCaptures(infoPieces);
         }
     }

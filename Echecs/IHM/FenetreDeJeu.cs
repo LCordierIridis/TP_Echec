@@ -101,6 +101,16 @@ namespace Echecs.IHM
             }
         }
 
+        public void ReinitCaptures()
+        {
+
+            for (int i = 0; i < CAPTURES; i++)
+            {
+                captures_noirs[i].Image = null;
+                captures_blancs[i].Image = null;
+            }
+        }
+
         public void ActualiserPartie(StatusPartie status)
         {
             this.status = status;
@@ -144,6 +154,17 @@ namespace Echecs.IHM
 
             // commencer une partie
             jeu.CommencerPartie();
+        }
+
+        void Restart()
+        {
+            // reset des chronomètres
+            tempsBlancs.Reset();
+            tempsNoirs.Reset();
+
+            ReinitCaptures();
+
+            jeu.Restart();
         }
 
         void DeplacerPiece(int x_depart, int y_depart, int x_arrivee, int y_arrivee)
@@ -374,7 +395,7 @@ namespace Echecs.IHM
             switch (e.Button.Tag.ToString())
             {
                 case "New":
-                    jeu.CommencerPartie();
+                    jeu.Restart();
                     break;
 
                 case "Open":

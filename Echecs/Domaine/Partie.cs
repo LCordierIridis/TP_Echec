@@ -52,6 +52,9 @@ namespace Echecs.Domaine
             // creation de l'echiquier
             echiquier = new Echiquier(this);
 
+            // Clear tout l'echiquier
+            // echiquier.clearEchiquier();
+
             // placement des pieces
             blancs.PlacerPieces(echiquier);
             noirs.PlacerPieces(echiquier);
@@ -60,13 +63,16 @@ namespace Echecs.Domaine
             status = StatusPartie.TraitBlancs;         
         }
 
+        public void Restart()
+        {
+            blancs.ClearPieces();
+            noirs.ClearPieces();
+            echiquier.clearEchiquier();
+            CommencerPartie();
+        }
+
         public void DeplacerPiece(int x_depart, int y_depart, int x_arrivee, int y_arrivee)
         {
-            /* TEST */
-            //vue.ActualiserCase(x_depart,  y_depart,  null);
-            //vue.ActualiserCase(x_arrivee, y_arrivee, InfoPiece.RoiBlanc);
-            /* FIN TEST */
-
             // case de départ
             Case depart = echiquier.Cases[y_depart * 8 + x_depart];
 

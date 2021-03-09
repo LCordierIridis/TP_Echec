@@ -12,6 +12,8 @@ namespace Echecs.IHM
 
         void CommencerPartie();
 
+        void Restart();
+
         void DeplacerPiece(int x_depart, int y_depart, int x_arrivee, int y_arrivee);
     }
 }
