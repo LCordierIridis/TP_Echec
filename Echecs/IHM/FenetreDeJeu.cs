@@ -388,6 +388,9 @@ namespace Echecs.IHM
             switch (e.Button.Tag.ToString())
             {
                 case "New":
+                    // reset des chronomètres
+                    tempsBlancs.Reset();
+                    tempsNoirs.Reset();
                     ReinitCaptures();
                     jeu.Restart();
                     break;
