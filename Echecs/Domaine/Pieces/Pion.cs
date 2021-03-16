@@ -68,17 +68,45 @@ namespace Echecs.Domaine
                 }
             }
 
+            Case[] cases = joueur.partie.echiquier.Cases;
+            int indexDestination = destination.Rangee * 8 + destination.Colonne;
+
+            bool belowDestinationOccupied = cases[indexDestination + 8 * colorMultiplier].piece != null;
+            bool enPassantPossible = false;
+            bool targetIsDifferentColor = false;
+
+            Case cibleEnPassant = cases[indexDestination + 8 * colorMultiplier];
+            if (destinationOccupied) { targetIsDifferentColor = destination.piece.joueur.couleur != joueur.couleur; }
+
+            if (cibleEnPassant.piece != null) {
+                if (cibleEnPassant.piece.info.type == TypePiece.Pion)
+                {
+                    enPassantPossible = ((Pion)cibleEnPassant.piece).enPassant && !destinationOccupied;
+                    if (enPassantPossible)
+                    {
+                        targetIsDifferentColor = cibleEnPassant.piece.joueur.couleur != joueur.couleur;
+                    }
+                }
+            }
+
             // Capture
-            if(destinationOccupied && destination.piece.joueur.couleur != joueur.couleur &&
-                horizontal_distance == 1 * colorMultiplier && Math.Abs(vertical_distance) == 1)
+            // Si la destination est occupée
+            // Ou si la case en dessous de la destination est occupée par un pion vulnérable au en passant
+            if ((destinationOccupied || (belowDestinationOccupied && enPassantPossible)) &&
+                targetIsDifferentColor && // Et si la piece visée est de couleur opposée
+                horizontal_distance == 1 * colorMultiplier && Math.Abs(vertical_distance) == 1) // Et que le mouvement d'attaque est conforme
             {
+                if (enPassantPossible)
+                {
+                    joueur.partie.vue.ActualiserCase(cibleEnPassant.piece.position.Colonne, cibleEnPassant.piece.position.Rangee, null);
+                    cases[indexDestination + 8 * colorMultiplier].Unlink();
+                }
+
                 destination.Link(this);
                 this.position = destination;
                 enPassant = false;
                 return true;
             }
-
-            // Prise en passant
 
             return false;
         }
