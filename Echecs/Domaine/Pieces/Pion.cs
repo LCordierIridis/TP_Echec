@@ -98,8 +98,12 @@ namespace Echecs.Domaine
             {
                 if (enPassantPossible)
                 {
+                    joueur.piecesCapturees.Add(cibleEnPassant.piece);
                     joueur.partie.vue.ActualiserCase(cibleEnPassant.piece.position.Colonne, cibleEnPassant.piece.position.Rangee, null);
-                    cases[indexDestination + 8 * colorMultiplier].Unlink();
+                    cibleEnPassant.Unlink();
+                } else
+                {
+                    joueur.piecesCapturees.Add(destination.piece);
                 }
 
                 destination.Link(this);

@@ -14,6 +14,8 @@ namespace Echecs.IHM
         void ActualiserCase(int x, int y, InfoPiece info);
 
         void ActualiserCaptures(List<InfoPiece> pieces);
+
+        void ReinitCaptures();
     }
 
      public enum EtatPartie {

@@ -197,7 +197,6 @@
             // 
             // tbrPausePlay
             // 
-            this.tbrPausePlay.Enabled = false;
             this.tbrPausePlay.ImageIndex = 9;
             this.tbrPausePlay.Name = "tbrPausePlay";
             this.tbrPausePlay.Tag = "PausePlay";
@@ -473,6 +472,7 @@
             this.lvcMoveNo,
             this.lvcTime,
             this.lvcMove});
+            this.lvwMoveHistory.HideSelection = false;
             this.lvwMoveHistory.Location = new System.Drawing.Point(400, 176);
             this.lvwMoveHistory.Name = "lvwMoveHistory";
             this.lvwMoveHistory.Size = new System.Drawing.Size(248, 128);

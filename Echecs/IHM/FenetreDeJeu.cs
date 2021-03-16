@@ -13,6 +13,8 @@ namespace Echecs.IHM
 {
     public partial class FenetreDeJeu : Form, IEvenements
     {
+        bool isPause;
+
         #region Attributs
 
         // référence sur la façade du << moteur de jeu >>
@@ -104,6 +106,15 @@ namespace Echecs.IHM
                     captures_noirs[idx_noirs++].Image = piecesBlanches[(int)p.type];
                 else
                     captures_blancs[idx_blancs++].Image = piecesNoires[(int)p.type];
+            }
+        }
+
+        public void ReinitCaptures()
+        {
+            for (int i = 0; i < CAPTURES; i++)
+            {
+                captures_noirs[i].Image = null;
+                captures_blancs[i].Image = null;
             }
         }
 
@@ -263,50 +274,53 @@ namespace Echecs.IHM
 
         void carreau_MouseDown(object sender, MouseEventArgs e)
         {
-            // sauvegarder le carreau de départ
-            picFrom = sender as PictureBox;
-            imgFrom = picFrom.Image;
+            if (!isPause)
+            {
+                // sauvegarder le carreau de départ
+                picFrom = sender as PictureBox;
+                imgFrom = picFrom.Image;
 
-            // terminer s'il n'y a pas de pièce sur le carreau
-            if (imgFrom == null)
-                return;
+                // terminer s'il n'y a pas de pièce sur le carreau
+                if (imgFrom == null)
+                    return;
 
-            // informations sur la pièce contenue dans le carreau
-            InfoPiece piece = imgFrom.Tag as InfoPiece;
+                // informations sur la pièce contenue dans le carreau
+                InfoPiece piece = imgFrom.Tag as InfoPiece;
 
-            // terminer si la partie n'est pas active ou si la couleur de la piece selectionnée ne corresponde pas à la couleur du joueur qui joue dans ce tours
-            if (status.etat == EtatPartie.Reset || status.etat == EtatPartie.Mat || status.couleur != piece.couleur)
-                return;
+                // terminer si la partie n'est pas active ou si la couleur de la piece selectionnée ne corresponde pas à la couleur du joueur qui joue dans ce tours
+                if (status.etat == EtatPartie.Reset || status.etat == EtatPartie.Mat || status.couleur != piece.couleur)
+                    return;
 
-            // demarrer le Drag & Drop
-            picFrom.DoDragDrop(imgFrom, DragDropEffects.Move);
+                // demarrer le Drag & Drop
+                picFrom.DoDragDrop(imgFrom, DragDropEffects.Move);
 
-            // remettre le curseur
-            pnlEdging.Cursor = Cursors.Default;
+                // remettre le curseur
+                pnlEdging.Cursor = Cursors.Default;
 
-            // remettre l'image sur le carreau de départ
-            picFrom.Image = imgFrom;
-            picFrom.BorderStyle = BorderStyle.None;
+                // remettre l'image sur le carreau de départ
+                picFrom.Image = imgFrom;
+                picFrom.BorderStyle = BorderStyle.None;
 
-            // terminer s'il n'y a pas de carreau cible
-            if (picTo == null)
-                return;
+                // terminer s'il n'y a pas de carreau cible
+                if (picTo == null)
+                    return;
 
-            // calculer les indices des carreaux de départ et arrivée
-            int idxFrom = Convert.ToInt32(picFrom.Tag);
-            int idxTo = Convert.ToInt32(picTo.Tag);
+                // calculer les indices des carreaux de départ et arrivée
+                int idxFrom = Convert.ToInt32(picFrom.Tag);
+                int idxTo = Convert.ToInt32(picTo.Tag);
 
-            // reset du carreau cible
-            picTo = null;
+                // reset du carreau cible
+                picTo = null;
 
-            // transformer les indices lineaires en numeros de rangée et colonne
-            int x1 = idxFrom % 8;        // colonne du carreau de départ
-            int y1 = (idxFrom - x1) / 8; // rangée du carreau de départ
-            int x2 = idxTo % 8;          // colonne du carreau d'arrivée
-            int y2 = (idxTo - x2) / 8;   // rangée du carreau d'arrivée
+                // transformer les indices lineaires en numeros de rangée et colonne
+                int x1 = idxFrom % 8;        // colonne du carreau de départ
+                int y1 = (idxFrom - x1) / 8; // rangée du carreau de départ
+                int x2 = idxTo % 8;          // colonne du carreau d'arrivée
+                int y2 = (idxTo - x2) / 8;   // rangée du carreau d'arrivée
 
-            // invoquer l'operation << DeplacerPiece >>
-            DeplacerPiece(x1, y1, x2, y2);
+                // invoquer l'operation << DeplacerPiece >>
+                DeplacerPiece(x1, y1, x2, y2);
+            }
         }
 
         void carreau_DragDrop(object sender, DragEventArgs e)
@@ -380,7 +394,11 @@ namespace Echecs.IHM
             switch (e.Button.Tag.ToString())
             {
                 case "New":
-                    jeu.CommencerPartie();
+                    // reset des chronomètres
+                    tempsBlancs.Reset();
+                    tempsNoirs.Reset();
+                    ReinitCaptures();
+                    jeu.Restart();
                     break;
 
                 case "Open":
@@ -421,11 +439,32 @@ namespace Echecs.IHM
 
                 case "ResumePlay":
                     // TODO
+                    isPause = false;
+                    PauseTimer();
                     break;
 
                 case "PausePlay":
                     // TODO
+                    isPause = true;
+                    PauseTimer();
                     break;
+            }
+        }
+
+        private void PauseTimer()
+        {
+            if (isPause) 
+            {
+                // arreter les chronomètres
+                tempsBlancs.Stop();
+                tempsNoirs.Stop();
+                timer.Stop();
+            } else
+            {
+                // demarrer les chronomètres
+                tempsBlancs.Start();
+                tempsNoirs.Start();
+                timer.Start();
             }
         }
 

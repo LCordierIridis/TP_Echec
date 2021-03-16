@@ -14,7 +14,8 @@ namespace Echecs.Domaine
 
         // associations
         public Partie partie { get; }
-        public List<Piece> pieces = new List<Piece>();
+        public List<Piece> pieces { get; set; }
+        public List<Piece> piecesCapturees { get; set; }
         public static int LAST_PIECE = 64;
         public static int NB_MAX_PIECE = 16;
         public static int NB_PIECE_ROW = 8;
@@ -26,6 +27,8 @@ namespace Echecs.Domaine
             this.couleur = couleur;
             this.partie = partie;
 
+            pieces = new List<Piece>();
+            piecesCapturees = new List<Piece>();
 
             pieces.Add(new Tour(this));
             pieces.Add(new Cavalier(this));
@@ -38,6 +41,12 @@ namespace Echecs.Domaine
             // TODO : creation des pieces du joueur
 
             for (int i = 0; i < 8; i++) pieces.Add(new Pion(this));
+        }
+
+        public void ClearPieces()
+        {
+            pieces.Clear();
+            piecesCapturees.Clear();
         }
 
         // TODO : décommentez lorsque vous auriez implementé les methode Unlink et Link de la classe Case

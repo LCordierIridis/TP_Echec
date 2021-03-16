@@ -30,5 +30,16 @@ namespace Echecs.Domaine
                     Cases[i].Color = Case.BLACK;
             }
         }
+
+        public void clearEchiquier() 
+        {
+            for (int i = 0; i < 64; i++)
+            {
+                int y = i / 8;
+                int x = i % 8;
+
+                partie.vue.ActualiserCase(x, y, null);
+            }
+        }
     }
 }

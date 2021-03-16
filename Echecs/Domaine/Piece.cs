@@ -10,7 +10,7 @@ namespace Echecs.Domaine
     abstract public class Piece
     {
         // attributs
-        public InfoPiece info;
+        public InfoPiece info { get; set; }
 
         // associations
         public Joueur joueur { get; }
