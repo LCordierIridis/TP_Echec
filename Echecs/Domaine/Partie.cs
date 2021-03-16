@@ -52,9 +52,6 @@ namespace Echecs.Domaine
             // creation de l'echiquier
             echiquier = new Echiquier(this);
 
-            // Clear tout l'echiquier
-            // echiquier.clearEchiquier();
-
             // placement des pieces
             blancs.PlacerPieces(echiquier);
             noirs.PlacerPieces(echiquier);

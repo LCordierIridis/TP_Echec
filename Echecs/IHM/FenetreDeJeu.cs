@@ -103,7 +103,6 @@ namespace Echecs.IHM
 
         public void ReinitCaptures()
         {
-
             for (int i = 0; i < CAPTURES; i++)
             {
                 captures_noirs[i].Image = null;
@@ -395,6 +394,7 @@ namespace Echecs.IHM
             switch (e.Button.Tag.ToString())
             {
                 case "New":
+                    ReinitCaptures();
                     jeu.Restart();
                     break;
 

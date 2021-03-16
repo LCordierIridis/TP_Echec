@@ -43,16 +43,10 @@ namespace Echecs.Domaine
             for (int i = 0; i < 8; i++) pieces.Add(new Pion(this));
         }
 
-        public void ClearCaptureArray()
-        {
-            this.partie.vue.ActualiserCaptures(new List<InfoPiece>());
-        }
-
         public void ClearPieces()
         {
             pieces.Clear();
             piecesCapturees.Clear();
-            ClearCaptureArray();
         }
 
         // TODO : décommentez lorsque vous auriez implementé les methode Unlink et Link de la classe Case
