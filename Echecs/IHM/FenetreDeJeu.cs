@@ -79,14 +79,18 @@ namespace Echecs.IHM
 
         public void ActualiserCase(int x, int y, InfoPiece info)
         {
-            Console.WriteLine("x : " + x + ", y : " + y);
-
             if (info == null)
                 carreaux[x, y].Image = null;
             else if (info.couleur == CouleurCamp.Blanche)
-                carreaux[x, y].Image = piecesBlanches[(int)info.type];           
+            {
+                carreaux[x, y].Image = piecesBlanches[(int)info.type];
+                Console.WriteLine(info.type + " x : " + x + ", y : " + y);
+            }
             else
+            {
                 carreaux[x, y].Image = piecesNoires[(int)info.type];
+                Console.WriteLine(info.type + " x : " + x + ", y : " + y);
+            }
         }
 
         public void ActualiserCaptures(List<InfoPiece> pieces)
