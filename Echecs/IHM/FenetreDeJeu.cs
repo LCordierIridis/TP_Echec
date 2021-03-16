@@ -155,17 +155,6 @@ namespace Echecs.IHM
             jeu.CommencerPartie();
         }
 
-        void Restart()
-        {
-            // reset des chronomètres
-            tempsBlancs.Reset();
-            tempsNoirs.Reset();
-
-            ReinitCaptures();
-
-            jeu.Restart();
-        }
-
         void DeplacerPiece(int x_depart, int y_depart, int x_arrivee, int y_arrivee)
         {
             jeu.DeplacerPiece(x_depart, y_depart, x_arrivee, y_arrivee);
