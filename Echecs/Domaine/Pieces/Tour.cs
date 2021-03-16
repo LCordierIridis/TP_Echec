@@ -11,6 +11,8 @@ namespace Echecs.Domaine
     {
         public Tour(Joueur joueur) : base(joueur, TypePiece.Tour) { }
 
+        public bool hasMoved { get; set; } = false;
+
         public override bool Deplacer(Case destination)
         {
             // Positive is up, Negative is down
@@ -29,6 +31,7 @@ namespace Echecs.Domaine
             {
                 destination.Link(this);
                 this.position = destination;
+                hasMoved = true;
                 return true;
             }
 

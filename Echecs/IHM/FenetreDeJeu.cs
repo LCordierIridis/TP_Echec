@@ -79,6 +79,8 @@ namespace Echecs.IHM
 
         public void ActualiserCase(int x, int y, InfoPiece info)
         {
+            Console.WriteLine("x : " + x + ", y : " + y);
+
             if (info == null)
                 carreaux[x, y].Image = null;
             else if (info.couleur == CouleurCamp.Blanche)
