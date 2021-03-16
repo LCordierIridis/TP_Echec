@@ -27,10 +27,27 @@ namespace Echecs.Domaine
 
             bool destinationOccupied = destination.piece != null;
 
+
             // Déplacement normal
             if (horizontal_distance == 1 * colorMultiplier && vertical_distance == 0 &&
                 !destinationOccupied)
             {
+                // Promotion
+                if ((joueur.couleur == CouleurCamp.Blanche && destination.Rangee == 0) ||
+                    (joueur.couleur == CouleurCamp.Noire && destination.Rangee == 7))
+                {
+                    Dame dame = new Dame(joueur);
+                    dame.position = destination;
+                    destination.Link(dame);
+                    position.Unlink();
+
+                    joueur.pieces.Remove(this);
+                    joueur.pieces.Add(dame);
+
+                    enPassant = false;
+                    return true;
+                }
+
                 destination.Link(this);
                 this.position = destination;
                 enPassant = false;

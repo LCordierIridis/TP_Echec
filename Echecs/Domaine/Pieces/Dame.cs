@@ -26,7 +26,7 @@ namespace Echecs.Domaine
             bool movingInDiagonal = Math.Abs(horizontal_distance) == Math.Abs(vertical_distance);
             bool movingInOnlyOneDirection = horizontal_distance * vertical_distance == 0;
 
-            Console.WriteLine("Diag : " + movingInDiagonal.ToString() + ", same tile : " + (destination != position) + ", sameColor : " + destinationOccupiedBySameColor);
+            Console.WriteLine("Diag : " + movingInDiagonal.ToString() + ", different tile : " + (destination != position) + ", sameColor : " + destinationOccupiedBySameColor);
 
             if ((movingInDiagonal || movingInOnlyOneDirection) && destination != position && !destinationOccupiedBySameColor && !pieceSurLeChemin(destination))
             {
